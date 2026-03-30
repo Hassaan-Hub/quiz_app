@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Link JS file -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <div id="timer" style="font-weight:bold; font-size:18px;"></div>
+        <p id="question"></p>
+
+        <div>
+            <label>
+                <input type="radio" name="answer" value="1" onchange="enableBtn()">
+                <span id="option1"></span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="answer" value="2" onchange="enableBtn()">
+                <span id="option2"></span>
+            </label>
+        </div>
+        <div>
+            <label>
+                <input type="radio" name="answer" value="3" onchange="enableBtn()">
+                <span id="option3"></span>
+            </label>
+        </div>
+
+        <button id="btn" disabled onclick="nextQuestion()">Next</button>
+    </div>
+</body>
+
+</html>
