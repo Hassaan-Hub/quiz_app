@@ -111,8 +111,15 @@ body::after {
 }
 
 @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
 }
 
 /* Progress */
@@ -214,12 +221,12 @@ body::after {
     display: none;
 }
 
-.option-radio:checked + .option-label {
+.option-radio:checked+.option-label {
     border-color: var(--accent);
     background: rgba(240, 192, 64, 0.12);
 }
 
-.option-radio:checked + .option-label .option-marker {
+.option-radio:checked+.option-label .option-marker {
     background: var(--accent);
     color: var(--bg);
     border-color: var(--accent);
@@ -487,4 +494,33 @@ body::after {
     .option-label {
         padding: 11px 12px;
     }
+}
+
+/* logout */
+
+#btn1 {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 999;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 36px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(240, 192, 64, 0.25);
+}
+
+#btn1:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(240, 192, 64, 0.4);
+}
+
+#btn1:active:not(:disabled) {
+    transform: translateY(0);
 }

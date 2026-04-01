@@ -10,10 +10,19 @@
     <!-- Link JS file -->
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
+    <script defer>
+        if (localStorage.getItem("isLogin") !== "true") {
+            window.location.href = "../next.html";
+        }
+        function logout() {
+            localStorage.removeItem("isLogin");
+            window.location.href = "../next.html";
+        }
+    </script>
 </head>
 
 <body>
-
+    <button id="btn1" onclick="logout()">Logout</button>
     <div>
         <div id="timer" style="font-weight:bold; font-size:18px;"></div>
         <p id="question"></p>

@@ -157,3 +157,5 @@ function endQuiz() {
     var options = document.getElementsByName("answer");
     for (var i = 0; i < options.length; i++) options[i].disabled = true;
 }
+
+

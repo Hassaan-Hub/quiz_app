@@ -5,8 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sign_up</title>
+  <script>
+    if (localStorage.getItem("isLogin") === "true") {
+      window.location.href = "quiz/index.html";
+    }
+  </script>
 </head>
-
 <body>
   <div>
     <h1>sign up</h1>
@@ -16,7 +20,7 @@
       <input id="pass" type="password" placeholder="Password"><br>
     </div>
     <button onclick="signUp()">signUp</button>
-    
+
     <h1>login</h1>
     <div>
       <input type="email" id="lEmail" placeholder="Email"><br>
@@ -26,4 +30,5 @@
   </div>
 </body>
 <script src="next.js"></script>
+
 </html>
