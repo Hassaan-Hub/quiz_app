@@ -29,7 +29,7 @@ function login() {
     if (user) {
         alert("login success");
         localStorage.setItem("isLogin", "true");
-        window.location.href = "quiz/index.html";
+        window.location.href = "quiz/quiz.html";
     } else {
         alert("invalid email or password");
     }

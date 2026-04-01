@@ -12,11 +12,11 @@
     <script defer src="app.js"></script>
     <script defer>
         if (localStorage.getItem("isLogin") !== "true") {
-            window.location.href = "../next.html";
+            window.location.href = "../index.html";
         }
         function logout() {
             localStorage.removeItem("isLogin");
-            window.location.href = "../next.html";
+            window.location.href = "../index.html";
         }
     </script>
 </head>
