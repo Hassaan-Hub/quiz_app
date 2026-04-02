@@ -6,6 +6,13 @@ function signUp() {
     var email = document.getElementById("email").value;
     var pass = document.getElementById("pass").value;
 
+    let passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+    if (!passPattern.test(pass)) {
+        alert("Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.");
+        return;
+    }else{
+        alert("signup success");
+    }
     users.push({
         name: nam,
         email: email,
@@ -15,7 +22,6 @@ function signUp() {
     // save in localStorage
     localStorage.setItem("users", JSON.stringify(users));
 
-    alert("signup success");
 }
 
 function login() {
@@ -33,7 +39,7 @@ function login() {
     } else {
         alert("invalid email or password");
     }
-    
+
     var exists = users.find(u => u.email === email);
     if (exists) {
         alert("Email already exists");
