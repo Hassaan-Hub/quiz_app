@@ -500,7 +500,7 @@ body::after {
 
 #btn1 {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     left: 24px;
     z-index: 999;
     background: var(--accent);
