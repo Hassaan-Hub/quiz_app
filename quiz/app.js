@@ -106,7 +106,9 @@ function nextQuestion() {
 }
 
 // Enable next button
-function enableBtn() { button.disabled = false; }
+function enableBtn() { 
+    button.disabled = false; 
+}
 
 // Initialize first question
 nextQuestion();
