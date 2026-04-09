@@ -68,6 +68,41 @@ var questions = [
         option2: "<b>",
         option3: "Both <strong> and <b>",
         correctAnswer: "Both <strong> and <b>"
+    },
+    {
+        question: "Which tag is used to insert an image in HTML?",
+        option1: "<img>",
+        option2: "<image>",
+        option3: "<pic>",
+        correctAnswer: "<img>"
+    },
+    {
+        question: "Which attribute is used to provide a unique name to an HTML element?",
+        option1: "class",
+        option2: "id",
+        option3: "name",
+        correctAnswer: "id"
+    },
+    {
+        question: "Which tag is used to define a table row?",
+        option1: "<td>",
+        option2: "<tr>",
+        option3: "<th>",
+        correctAnswer: "<tr>"
+    },
+    {
+        question: "Which tag is used to create a paragraph?",
+        option1: "<p>",
+        option2: "<para>",
+        option3: "<text>",
+        correctAnswer: "<p>"
+    },
+    {
+        question: "Which input type is used for passwords?",
+        option1: "text",
+        option2: "password",
+        option3: "email",
+        correctAnswer: "password"
     }
 ];
 
@@ -86,13 +121,14 @@ function nextQuestion() {
     for (var i = 0; i < options.length; i++) {
         if (options[i].checked) {
             var selected = options[i].value;
-            var userAnswer = questions[index - 1][`option${selected}`];
-            var correctAns = questions[index - 1].correctAnswer;
+            var userAnswer = questions[index][`option${selected}`];
+            var correctAns = questions[index].correctAnswer;
             if (userAnswer === correctAns) score++;
             options[i].checked = false;
             button.disabled = true;
         }
     }
+    index++;
 
     if (index >= questions.length) {
         endQuiz(); // quiz end if questions finish
@@ -101,13 +137,12 @@ function nextQuestion() {
         option1.innerText = questions[index].option1;
         option2.innerText = questions[index].option2;
         option3.innerText = questions[index].option3;
-        index++;
     }
 }
 
 // Enable next button
-function enableBtn() { 
-    button.disabled = false; 
+function enableBtn() {
+    button.disabled = false;
 }
 
 // Initialize first question
